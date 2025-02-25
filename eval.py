@@ -3,7 +3,7 @@ import gym
 import numpy as np
 import time
 import random
-from IPython.display import clear_output
+# from IPython.display import clear_output
 
 from xml.etree import ElementTree as ET
 import importlib.util
@@ -151,7 +151,7 @@ def run_agent(agent_file, env_config, render=False):
 
         if render:
             print(f"step={step_count}")
-            env.render_env((taxi_row, taxi_col))
+            # env.render_env((taxi_row, taxi_col))
             time.sleep(0.5)
 
         action = student_agent.get_action(obs)  # 確保 `get_action(obs)` 支援這個 state 格式
