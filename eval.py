@@ -199,7 +199,6 @@ if __name__ == "__main__":
     agent_score = run_agent("student_agent.py", env_config, render=True)
     print(f"Final Score: {agent_score}")
     ### End of evaluation section
-
     # push to leaderboard
     params = {
         'act': 'add',
@@ -207,7 +206,7 @@ if __name__ == "__main__":
         'score': str(agent_score),
         'token': args.token
     }
-    url = 'http://localhost/drl_hw1/action.php'
+    url = 'http://140.114.89.61/drl_hw1/action.php'
 
     response = requests.get(url, params=params)
     if response.ok:
